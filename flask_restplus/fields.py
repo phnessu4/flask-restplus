@@ -66,6 +66,12 @@ def _get_value_for_key(key, obj, default):
             return obj[key]
         except (IndexError, TypeError, KeyError):
             pass
+
+        try:
+            return obj[int(key)]
+        except (IndexError, TypeError, KeyError):
+            pass
+
     return getattr(obj, key, default)
 
 
