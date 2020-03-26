@@ -45,7 +45,7 @@ RE_RULES = re.compile('(<.*>)')
 # List headers that should never be handled by Flask-RESTPlus
 HEADERS_BLACKLIST = ('Content-Length',)
 
-DEFAULT_REPRESENTATIONS = [('application/json', output_json)]
+DEFAULT_REPRESENTATIONS = [('application/json; charset=utf-8', output_json)]
 
 log = logging.getLogger(__name__)
 
